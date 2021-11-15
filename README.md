@@ -22,7 +22,7 @@ if (!isProd) {
 This project uses:
 
 * rollup with terser plugin
-* plain webpack
+* webpack with terser plugin
 
 To test the effects of bundling with encapsulated `process.env` checks
 
