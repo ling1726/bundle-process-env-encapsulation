@@ -1,8 +1,10 @@
+import { getReactFiberFromNode } from './utils/getReactFiberFromNode';
 import { isProd } from './env';
+
 
 export function usePopper() {
     if (!isProd) {
-        console.log('Should not be in prod')
+        getReactFiberFromNode();
     }
 }
 

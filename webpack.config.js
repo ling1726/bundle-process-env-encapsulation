@@ -1,3 +1,5 @@
+const TerserPlugin = require("terser-webpack-plugin");
+
 const webpackConfig = {
   name: "client",
   target: "web",
@@ -10,7 +12,8 @@ const webpackConfig = {
     filename: `bundle.webpack.js`,
   },
   optimization: {
-    minimize: false,
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   stats: {
     optimizationBailout: true,
